@@ -6,12 +6,35 @@ public class App {
 
     //todo Task 1
     public void largestNumber(){
-        // input your solution here
+        Scanner scanner = new Scanner(System.in);
+        int i = 1;
+        double num, numMax;
+
+        System.out.print("Number " + i + ": ");
+        num = scanner.nextDouble();
+        numMax = num;
+
+        if (num <= 0)
+            System.out.println("No number entered");
+        else while(i > 0) {
+            i++;
+            System.out.print("Number " + i + ": ");
+            num = scanner.nextDouble();
+
+            if (num > numMax)
+                numMax = num;
+
+            if(num <= 0)
+                break;
+        }
+
+        System.out.printf("The largest number is %.2f\n", numMax);
+
     }
 
     //todo Task 2
     public void stairs(){
-        // input your solution here
+        Scanner scanner = new Scanner(System.in);
     }
 
     //todo Task 3
