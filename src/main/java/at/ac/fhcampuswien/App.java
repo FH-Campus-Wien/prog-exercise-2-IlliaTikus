@@ -15,26 +15,40 @@ public class App {
         numMax = num;
 
         if (num <= 0)
-            System.out.println("No number entered");
-        else while(i > 0) {
-            i++;
-            System.out.print("Number " + i + ": ");
-            num = scanner.nextDouble();
+            System.out.println("No number entered.");
+        else {
+            while(i > 0) {
+                i++;
+                System.out.print("Number " + i + ": ");
+                num = scanner.nextDouble();
 
-            if (num > numMax)
-                numMax = num;
+                if (num > numMax)
+                    numMax = num;
 
-            if(num <= 0)
-                break;
+                if(num <= 0)
+                    break;
+            }
+            System.out.printf("The largest number is %.2f\n", numMax);
         }
-
-        System.out.printf("The largest number is %.2f\n", numMax);
-
     }
 
     //todo Task 2
     public void stairs(){
         Scanner scanner = new Scanner(System.in);
+        int a = 1;
+
+        System.out.print("n: ");
+        int num = scanner.nextInt();
+
+        if (num <= 0)
+            System.out.println("Invalid number!");
+        else for(int i = 0; i < num; i++) {
+            for(int j = 0; j <= i; j++) {
+                System.out.print(a + " ");
+                a++;
+            }
+            System.out.println();
+        }
     }
 
     //todo Task 3
