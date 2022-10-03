@@ -53,7 +53,13 @@ public class App {
 
     //todo Task 3
     public void printPyramid(){
-        // input your solution here
+        for(int i = 0; i < 6; i++) {
+            for (int k = 4; k >= i; k--)
+                System.out.print(" ");
+            for (int j = 0; j < i*2 + 1; j++)
+                System.out.print("*");
+            System.out.println();
+        }
     }
 
     //todo Task 4
