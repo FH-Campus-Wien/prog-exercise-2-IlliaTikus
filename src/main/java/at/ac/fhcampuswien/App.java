@@ -6,7 +6,7 @@ public class App {
 
     //todo Task 1
     public void largestNumber(){
-        Scanner scanner = new Scanner(System.in);
+        /*Scanner scanner = new Scanner(System.in);
         int i = 1;
         double num, numMax;
 
@@ -29,12 +29,12 @@ public class App {
                     break;
             }
             System.out.printf("The largest number is %.2f\n", numMax);
-        }
+        }*/
     }
 
     //todo Task 2
     public void stairs(){
-        Scanner scanner = new Scanner(System.in);
+        /*Scanner scanner = new Scanner(System.in);
         int a = 1;
 
         System.out.print("n: ");
@@ -48,23 +48,54 @@ public class App {
                 a++;
             }
             System.out.println();
-        }
+        }*/
     }
 
     //todo Task 3
     public void printPyramid(){
-        for(int i = 0; i < 6; i++) {
+        /*for(int i = 0; i < 6; i++) {
             for (int k = 4; k >= i; k--)
                 System.out.print(" ");
             for (int j = 0; j < i*2 + 1; j++)
                 System.out.print("*");
             System.out.println();
-        }
+        }*/
     }
 
     //todo Task 4
-    public void printRhombus(){
-        // input your solution here
+    public void printRhombus() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("h: ");
+        int h = scanner.nextInt();
+        System.out.print("c: ");
+        char c = scanner.next().charAt(0);
+
+        if (h % 2 == 0)
+            System.out.println("Invalid number!");
+        else {
+            for (int i = 0; i < h/2 + 1; i++) {
+                for (int k = h/2-1; k >= i; k--)
+                    System.out.print(" ");
+                for (int j = i; j > 0; j--)
+                    System.out.print((char) (c - j));
+                System.out.print(c);
+                for (int l = 0; l < i; l++)
+                    System.out.print((char) (c - 1 - l));
+                System.out.println();
+            }
+
+            for (int i = h/2 ; i > 0; i--) {
+                for (int k = h/2; k >= i; k--)
+                    System.out.print(" ");
+                for (int j = i-1; j > 0; j--)
+                    System.out.print((char) (c - j));
+                System.out.print(c);
+                for (int l = 0; l < i-1; l++)
+                    System.out.print((char) (c - 1 - l));
+                System.out.println();
+            }
+        }
     }
 
     //todo Task 5
