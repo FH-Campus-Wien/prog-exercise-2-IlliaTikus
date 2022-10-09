@@ -6,7 +6,7 @@ public class App {
 
     //todo Task 1
     public void largestNumber(){
-        /*Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         int i = 1;
         double num, numMax;
 
@@ -29,12 +29,12 @@ public class App {
                     break;
             }
             System.out.printf("The largest number is %.2f\n", numMax);
-        }*/
+        }
     }
 
     //todo Task 2
     public void stairs(){
-        /*Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         int a = 1;
 
         System.out.print("n: ");
@@ -48,23 +48,23 @@ public class App {
                 a++;
             }
             System.out.println();
-        }*/
+        }
     }
 
     //todo Task 3
     public void printPyramid(){
-        /*for(int i = 0; i < 6; i++) {
+        for(int i = 0; i < 6; i++) {
             for (int k = 4; k >= i; k--)
                 System.out.print(" ");
             for (int j = 0; j < i*2 + 1; j++)
                 System.out.print("*");
             System.out.println();
-        }*/
+        }
     }
 
     //todo Task 4
     public void printRhombus() {
-        /*Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
         System.out.print("h: ");
         int h = scanner.nextInt();
@@ -95,7 +95,7 @@ public class App {
                     System.out.print((char) (c - 1 - l));
                 System.out.println();
             }
-        }*/
+        }
     }
 
     //todo Task 5
@@ -126,12 +126,43 @@ public class App {
 
         System.out.printf("Average: %.2f\n", average);
         System.out.println("Negative marks: " + count);
-
     }
 
     //todo Task 6
     public void happyNumbers(){
-        // input your solution here
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("n: ");
+        int n = scanner.nextInt();
+        int a , b, newn;
+
+        for(int i = 0; i >= 0; i++) {
+            newn = 0;
+            a = n % 10;
+            b = n / 10;
+
+            for(int j = 0; j >= 0; j++) {
+                newn += Math.pow((a, 2);
+
+                if(b == 0)
+                    break;
+
+                a = b % 10;
+                b = b / 10;
+            }
+
+            if(newn == 1) {
+                System.out.println("Happy number!");
+                break;
+            }
+
+            if(newn == 4) {
+                System.out.println("Sad number!");
+                break;
+            }
+
+            n = newn;
+        }
     }
 
     public static void main(String[] args){
