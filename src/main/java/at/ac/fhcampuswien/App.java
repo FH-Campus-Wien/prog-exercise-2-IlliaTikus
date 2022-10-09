@@ -142,7 +142,7 @@ public class App {
             b = n / 10;
 
             for(int j = 0; j >= 0; j++) {
-                newn += Math.pow((a, 2);
+                newn += Math.pow(a, 2);
 
                 if(b == 0)
                     break;
