@@ -64,7 +64,7 @@ public class App {
 
     //todo Task 4
     public void printRhombus() {
-        Scanner scanner = new Scanner(System.in);
+        /*Scanner scanner = new Scanner(System.in);
 
         System.out.print("h: ");
         int h = scanner.nextInt();
@@ -95,12 +95,38 @@ public class App {
                     System.out.print((char) (c - 1 - l));
                 System.out.println();
             }
-        }
+        }*/
     }
 
     //todo Task 5
     public void marks(){
-        // input your solution here
+        Scanner scanner = new Scanner(System.in);
+
+        int mark, i;
+        int sum = 0, count = 0;
+
+        for(i = 1; i > 0; i++){
+            System.out.print("Mark " + i + ": ");
+            mark = scanner.nextInt();
+
+            if (mark < 0 || mark > 5) {
+                System.out.println("Invalid mark!");
+                i -= 1;
+                continue;
+            }
+
+            sum += mark;
+            if(mark == 5)
+                count += 1;
+            if (mark == 0)
+                break;
+        }
+
+        double average = (double) sum / i;
+
+        System.out.printf("Average: %.2f\n", average);
+        System.out.println("Negative marks: " + count);
+
     }
 
     //todo Task 6
