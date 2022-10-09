@@ -122,7 +122,7 @@ public class App {
                 break;
         }
 
-        double average = (double) sum / i;
+        double average = (double) sum / (i-1);
 
         System.out.printf("Average: %.2f\n", average);
         System.out.println("Negative marks: " + count);
