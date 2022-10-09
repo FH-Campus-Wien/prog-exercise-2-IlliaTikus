@@ -102,7 +102,7 @@ public class App {
     public void marks(){
         Scanner scanner = new Scanner(System.in);
 
-        int mark, i;
+        int mark = 0, i;
         int sum = 0, count = 0;
 
         for(i = 1; i > 0; i++){
@@ -122,9 +122,13 @@ public class App {
                 break;
         }
 
-        double average = (double) sum / (i-1);
+        if(mark == 0)
+            System.out.printf("Average: %.2f\n", 0.00);
+        else {
+            double average = (double) sum / (i-1);
+            System.out.printf("Average: %.2f\n", average);
+        }
 
-        System.out.printf("Average: %.2f\n", average);
         System.out.println("Negative marks: " + count);
     }
 
